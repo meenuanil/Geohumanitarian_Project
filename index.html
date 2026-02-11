@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Before After Flood Comparison</title>
+
+<!-- Image comparison slider library -->
+<script defer src="https://unpkg.com/img-comparison-slider@8/dist/index.js"></script>
+
+<style>
+  body{
+    margin:0;
+    background:#0b1e2d;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+
+  .container{
+    width:900px;
+    max-width:95%;
+    position:relative;
+  }
+
+  img-comparison-slider{
+    width:100%;
+    height:auto;
+    --divider-width:3px;
+    --divider-color:white;
+  }
+
+  .label{
+    position:absolute;
+    top:20px;
+    background:rgba(0,0,0,0.65);
+    color:white;
+    padding:10px 18px;
+    border-radius:25px;
+    font-size:16px;
+    font-weight:bold;
+  }
+
+  .before{ left:20px; }
+  .after{ right:20px; }
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <img-comparison-slider>
+    <img slot="first"
+      src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/92000/92669/kerala_oli_201837.jpg">
+      
+    <img slot="second"
+      src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/92000/92669/kerala_msi_2018234.jpg">
+  </img-comparison-slider>
+
+  <div class="label before">February 6, 2018</div>
+  <div class="label after">August 22, 2018</div>
+
+</div>
+
+</body>
+</html>
